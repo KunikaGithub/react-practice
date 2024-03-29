@@ -4,14 +4,23 @@ import './App.css'
 function App() {
 
   let [counter , setcounter] = useState(0);
-  const addValue = () =>{
-    console.log("clicked" ,counter);
-    setcounter(counter +1)
-  }
-  
-  const remvalue = ()=>{
-    setcounter(counter-1)
-  }
+
+  if(counter>=20 ){
+    const addValue = () =>{
+      console.log("clicked" ,counter);
+      setcounter(counter +1)
+    }
+  }if else (counter<=0) {
+      const remvalue = ()=>{
+        setcounter(counter-1)
+        console.log( counter);
+      }
+      
+    } else {
+
+      console.log("sorry we can't");
+      
+    }
   return (
     <>
     <h1>Chai or code</h1>
